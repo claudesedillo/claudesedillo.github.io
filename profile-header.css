@@ -3,7 +3,10 @@
     background-color: #f4f4f4;
     overflow: hidden;
 }
-#header > span, a{
+#header a:hover{
+    background-color: #ccc;
+}
+#header > span, #header > a{
     float: left;
     display: block;
     color: black;
