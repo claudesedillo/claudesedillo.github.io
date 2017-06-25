@@ -1,51 +1,16 @@
 <html>
     <head>
         <link rel = "stylesheet" type="text/css" href="design/navBar.css">
-        <link rel = "stylesheet" type="text/css" href="profile-posts.css">
         <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="design/profileDesign.css">
         
-        <style>
-            .userName{
-                text-transform: none;
-            }
-            
-            .row{
-                height:500px;
-                width:750px;
-            }
-            
-            #albumsAndPost{
-                background-color:white;
-                height:500px;
-
-            }    
-            
-            #albums{
-                background-color:yellow;
-
-height:500px;
-
-            }    
-            
-            #information{
-                background-color:green;
-                height:500px;
-            }
-            
-            #posts{
-                background-color:gray;
-                height:500px;
-            }
-
-            
-        </style>
     </head>
     <body>
-       <div class = "navBar">
-            <a1 href = "homepage.html"><img src = "logo.png" height = "60px"></img></a1>
+        <div class = "navBar">
+            <a1 href = "homepage.html"><img src = "logo.png" height = "60px"></a1>
         
-            <a href = "homepage.html" data-hover="Home"><img src = "images/home.png"></img></a>
-            <a href="allPhotos.html" data-hover="Photos"><img src = "images/photos.png"></img></a>
+            <a href = "homepage.html" data-hover="Home"><img src = "images/home.png"></a>
+            <a href="allPhotos.html" data-hover="Photos"><img src = "images/photos.png"></a>
         </div> 
         
         <div class="row">
@@ -63,17 +28,17 @@ height:500px;
             <div id="albumsAndPost" class="col s12">
                 <h1>Welcome to <span class="userName"></span>'s profile!</h1>
                 
-                <ul><h4>Recent posts:</h4>
+                <ol><h4>Recent posts:</h4>
                     <li id="recentP1">1</li>
-                    <li id="recentP1">1</li>
-                    <li id="recentP1">1</li>
-                </ul>
+                    <li id="recentP2">1</li>
+                    <li id="recentP3">1</li>
+                </ol>
                     
-                <ul><h4>Recet albums:</h4>
+                <ol><h4>Recet albums:</h4>
                     <li id="recentA1">2</li>
-                    <li id="recentA1">2</li>
-                    <li id="recentA1">2</li>
-                </ul>
+                    <li id="recentA2">2</li>
+                    <li id="recentA3">2</li>
+                </ol>
             </div>
             
             
@@ -113,11 +78,14 @@ height:500px;
             </div>
             
             
-            <div id="albums" class="col s12"></div>
+            <div id="albums" class="col s12">
+                <h4 id="albumIntro">Album names: </h4>
+                <div class = "collection"></div>
+            </div>
             
             
             <div id="posts" class="col s12">
-            <h4><span class="userName"></span>' posts (Latest to oldest!)</h4>
+            <h4 id="postsIntro"><span class="userName"></span>' posts (Latest to oldest!)</h4>
             </div>
             
         </div>

@@ -114,7 +114,6 @@ function fillupData() {
 
 function getMyPost() {
     var theID = temp[1];
-    var sum = 0;
     var i;
     console.log("inside postCount: " + theID);
     
@@ -173,6 +172,103 @@ function createPosts() {
     //Do not place this before the append. It will not work.
 }
 
+function getMyAlbums() {
+    var theID = temp[1];
+    var i;
+    
+    console.log("Inside getMyalbum: " + theID);
+    
+    for(i = 0; i < albums.length; i++) {
+        if(theID == albums[i].userId) {
+            ownAlbum[albumIndex] = albums[i];
+            albumIndex++;
+        }
+    }
+    
+    console.log("Album size: " + ownAlbum.length);
+}
+
+function setRecentUploads() {
+    var i;
+    var index;
+    getMyAlbums();
+    index = ownAlbum.length - 1;
+    
+    for(i = 0; i < 3; i++) {
+        if(i == 0) {
+            $("li#recentA1").html(ownAlbum[index].title);
+            $("li#recentA1").attr("class", ownAlbum[index].id);
+
+        }
+        
+        else if(i == 1) {
+            $("li#recentA2").html(ownAlbum[index].title);
+            $("li#recentA2").attr("class", ownAlbum[index].id);
+        }
+        
+        else {
+            $("li#recentA3").html(ownAlbum[index].title);
+            $("li#recentA3").attr("class", ownAlbum[index].id);
+        }
+        
+        index--;
+    }
+}
+
+function setRecentPosts() {
+    var i;
+    var index;
+    index = ownPosts.length - 1;
+    
+    for(i = 0; i < 3; i++) {
+        if(i == 0) {
+            $("li#recentP1").html(ownPosts[index].title);
+            $("li#recentP1").attr("class", ownPosts[index].id);
+
+        }
+        
+        else if(i == 1) {
+            $("li#recentP2").html(ownPosts[index].title);
+            $("li#recentP2").attr("class", ownPosts[index].id);
+        }
+        
+        else {
+            $("li#recentP3").html(ownPosts[index].title);
+            $("li#recentP3").attr("class", ownPosts[index].id);
+        }
+        
+        index--;
+    }
+}
+
+function createAlbums(){
+    console.log("Inisde createAlbums: " + ownAlbum.length);
+    var size = ownAlbum.length;
+    var i;
+    var index = size - 1;
+    var anchor;
+    
+    for(i = 0; i < size; i++) {
+        //create anchor
+        anchor = $("<a></a>");
+        anchor.attr("class", "collection-item");
+        
+        //add an id (which will be passed on href)
+        anchor.attr("id", ownAlbum[index].id);
+        
+        //add value inside anchor tag
+        anchor.html(ownAlbum[index].title);
+        
+        
+        //append to the collection
+        $("div.collection").append(anchor);
+        
+        //decrement index
+        index--;
+        
+    }
+}
+
 $("document").ready(function() {
     
     //Get objects, and perform necessary tasks needed.
@@ -193,10 +289,20 @@ $("document").ready(function() {
         setUserTab();
         fillupData();
         createPosts();
+        setRecentUploads();
+        setRecentPosts();
+        createAlbums();
         document.title = theUser.username;
        
     });
     
+    $(document).on("click", "div.collection a", function() {
+        var albumID;
+        var name = theUser.username;
+        albumID = $(this).attr("id");
+        console.log(name + " " + albumID); 
+        window.location.href = "profileSpecificAlbum.html" + "?" + "albumID=" + albumID;
+    });
     
     
 });

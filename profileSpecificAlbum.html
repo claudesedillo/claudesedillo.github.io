@@ -1,7 +1,10 @@
 <html>
     <head>
-        <link rel = "stylesheet" type="text/css" href="navBar.css">
-        <link rel = "stylesheet" type="text/css" href="profile-header.css">
+        <link rel = "stylesheet" type="text/css" href="design/navBar.css">
+        <link rel = "stylesheet" type="text/css" href="design/albumDesign.css">
+        <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+        
+<!--
         <style>
             .container {
               text-align: justify;
@@ -21,46 +24,25 @@
                 margin:auto;
             }
         </style>
+-->
     </head>
     <body>
-       <div class = "navBar">
-            <a1 href = "homepage.html"><img src = "logo.png" height = "60px"></img></a1>
+        <div class = "navBar">
+            <a1 href = "homepage.html"><img src = "logo.png" height = "60px"></a1>
         
-            <a href = "homepage.html" data-hover="Home"><img src = "images/home.png"></img></a>
-            <a href="allPhotos.html" data-hover="Photos"><img src = "images/photos.png"></img></a>
+            <a href = "homepage.html" data-hover="Home"><img src = "images/home.png"></a>
+            <a href="allPhotos.html" data-hover="Photos"><img src = "images/photos.png"></a>
         </div>  
-        <div id = "Header">
-                <span>Claude</span>
-                <a href="profileAlbums.html">See Albums</a>
-                <a href="profileOverview.html">See information</a>
-        </div>
+
         <div id = "mainPanel">
-            <p>Album Name</p>
-            <p><a href="photo..html">View Sample Specific Photo</a></p>
-            <div class="container">
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-            </div>
-            <div class="container">
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-            </div>
-            <div class="container">
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-            </div>
-            <div class="container">
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-                <div class="box"><img src = "thumbnail.png"></div>
-            </div>
+            <h1 id="albumTitle">Title</h1>
+            <h4>By <span id="username"></span></h4>
+            <div class="container"></div>
+            
         </div>
+        
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/albumJQ.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
     </body>
 </html>

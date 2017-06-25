@@ -1,0 +1,15 @@
+div#mainPanel{
+    position:relative;
+    top:50px;
+}
+
+.container{
+    display:flex;
+    margin:auto;
+    flex-wrap: wrap;
+}
+
+.material-placeholder{
+    padding:5px;
+    margin:5px;
+}

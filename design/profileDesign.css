@@ -1,0 +1,31 @@
+
+.userName{
+    text-transform: none;
+}
+            
+.row{
+    height:750px;
+    width:750px;
+}
+            
+#albumsAndPost{
+    background-color:white;
+}    
+            
+#albums{
+     background-color:yellow;
+}    
+            
+#information{
+    background-color:green;
+}
+            
+#posts{
+        background-color:gray;
+}
+            
+
+#posts, #information, #albums, #albumsAndPost{
+    height: 700px;
+    overflow:auto;
+}

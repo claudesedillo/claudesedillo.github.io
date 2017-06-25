@@ -99,7 +99,7 @@ function createPosts(titleValue, authorValue, bodyValue, theUserID) {
     pAuthor.append(theLink); //add the link to the div with "by"
     
     //set the post to have an id of "post" (CAN CHANGE)
-    postDiv.attr("id", "post");
+    postDiv.attr("class", "post");
     pBody.html(bodyValue); //add the body value
     title.html(titleValue); //add the title value
     
@@ -199,7 +199,7 @@ $("document").ready(function() {
     
     
     //When clicked,  redirects user to the profile page of specific username clicked(PLUS the iduser //value).
-    $(document).on("click", "div#post a", function() {
+    $(document).on("click", "div.post a", function() {
         //Checking the classname value.
 //        console.log("User ID: " + $(this).attr("class"));
 //        console.log("Only anchors inside div#post is selected.");
