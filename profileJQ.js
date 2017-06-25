@@ -193,6 +193,7 @@ $("document").ready(function() {
         setUserTab();
         fillupData();
         createPosts();
+        document.title = theUser.username;
        
     });
     
