@@ -90,8 +90,8 @@ function createPosts(titleValue, authorValue, bodyValue, theUserID) {
     //Create the link.
     theLink.html(authorValue);
     theLink.attr({
-        class: theUserID,
-        href: "profile.html"//change this to the profile html.
+        class: theUserID
+        //href: "profile.html"//change this to the profile html.
 
     }); //sets the name as the UserID to identify who's the person to be placed on the profile.
 
@@ -110,7 +110,18 @@ function createPosts(titleValue, authorValue, bodyValue, theUserID) {
     
     
     //Append the newly created post to the postContainer
-    $("div#postContainer").append(postDiv);
+    //$("div#postContainer").append(postDiv);
+    $(postDiv).hide().appendTo("div#postContainer").fadeIn(500);
+}
+
+function createSeeMore() {
+    var seeMoreDiv = $("<div></div>");
+    
+
+    seeMoreDiv.html("See more");
+    seeMoreDiv.attr("id", "seeMore");
+    
+    $(seeMoreDiv).hide().appendTo("div#postContainer").slideDown(150, "swing");
 }
 
 
@@ -137,6 +148,9 @@ function loadPosts() {
                          theUserID);
             postIndex--;
         }
+        
+            //Add a see more text here.
+            createSeeMore();   
     }
     
     else {
@@ -146,8 +160,7 @@ function loadPosts() {
     console.log("PostIndex update: " + postIndex);
 
     
-    //Add a see more text here.
-    //createSeeMore();   
+
     
 }
 
@@ -179,24 +192,46 @@ $("document").ready(function() {
         console.log("FIRST LOAD POST: " + postIndex);
         
         //Preload posts needed.
-        loadPosts();
         
+        loadPosts();
     });
     
     
-    //When clicked, 
-    $(document).on("click", "a", function() {
+    //When clicked,  redirects user to the profile page of specific username clicked(PLUS the iduser //value).
+    $(document).on("click", "div#post a", function() {
         //Checking the classname value.
-        console.log("User ID: " + $(this).attr("class"));
-        
-        //Call a function that would go to the profile and set up all data
-        //regarding the user, based from the userID.
-        
-        //setUpProfile();
-    })
+//        console.log("User ID: " + $(this).attr("class"));
+//        console.log("Only anchors inside div#post is selected.");
+        window.location.href = "profile.html?userID=" +  $(this).attr("class");
+    });
      
-
+    
+    //When see more is clicked, load next ten.
+    $(document).on("click", "#seeMore", function() {
+        
+        //delete current see more
+        $("#seeMore").slideUp(150,"swing", function() {
+            $(this).remove();
+        });
+        
+        //then load the next posts (tracked by indexPosts)
+        if(postIndex != -1) 
+            loadPosts();
+        else {
+            setTimeout(function() {
+                var noMore = $("<div></div>");
+            
+                noMore.attr("id", "noMore");
+                noMore.html("No more post to be shown.");
+                $(noMore).hide().appendTo("div#postContainer").slideDown(150, "swing");
+            }, 500);
+            
+        }
+    });
+    
+    
 });
+
 
 
 
