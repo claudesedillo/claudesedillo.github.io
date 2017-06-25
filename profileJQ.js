@@ -64,7 +64,7 @@ getPosts = new Promise(function(resolve, reject) {
 function searchUser(theId) {
     var x = 0;
     
-    while(x <= users.length) {
+    while(x < users.length) {
         
         if(users[x].id == theId) {
             return users[x].username;

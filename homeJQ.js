@@ -65,8 +65,9 @@ getPosts = new Promise(function(resolve, reject) {
 function searchUser(theId) {
     var x = 0;
     
-    while(x <= users.length) {
-        
+    console.log(theId);
+    while(x < users.length) {
+
         if(users[x].id == theId) {
             return users[x].username;
         }
@@ -181,18 +182,18 @@ $("document").ready(function() {
         console.log(result)
         
         //checking purposes
-//        console.log(photos);
-//        console.log(users);
-//        console.log(albums);
-//        console.log(posts);
+        console.log(photos);
+        console.log(users);
+        console.log(albums);
+        console.log(posts);
         
+        //If error occurs, check this.
         postIndex = posts.length - 1; //Index of the posts.
-        
+
         //checking purposes
         console.log("FIRST LOAD POST: " + postIndex);
         
         //Preload posts needed.
-        
         loadPosts();
     });
     
