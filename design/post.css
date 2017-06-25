@@ -1,0 +1,28 @@
+#post{
+    margin-top: 15px;
+    display:none;
+}
+    
+a{
+    cursor:pointer;
+}
+
+a, p{
+    font-size: 14pt;
+}
+#seeMore{
+    text-align:center;
+    background-color: white;
+    cursor:pointer;
+}
+    
+#noMore{
+    text-align:center;
+    background-color:white;
+    cursor:not-allowed;
+}
+
+h1{
+    color:#009688;
+    font-size: 16pt;
+}
