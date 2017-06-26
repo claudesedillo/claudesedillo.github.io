@@ -1,13 +1,12 @@
+#wrapper {
+  display: flex;
+}
 .user {
-    
-    float:right;
     height: 450px;
     width: 200px;
-    position:relative;
     top:120px;
-
-    z-index: 1;
-
+    flex: 1;
+    position: relative;
 }
 
 .user span {
@@ -30,29 +29,16 @@
 }
             
 .row{
-
+    flex: 0 0 75%;
     height:750px;
     width:750px;
-    position: relative;
     right:45px;
-    top: 120px;
+    top: 60px;
+    left: 30px;
+    position: relative;
 
 
-}
-            
-#albumsAndPost{
-    background-color:white;
-}    
-            
-#albums{
-     background-color:yellow;
-}    
-            
-            
-#posts{
-    background-color:gray;
-}
-            
+}       
 
 #posts, #albums, #albumsAndPost{
     height: 700px;
