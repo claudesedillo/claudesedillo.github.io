@@ -1,15 +1,33 @@
 div#mainPanel{
-    position:relative;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 5%;
     top:50px;
 }
 
 .container{
     display:flex;
-    margin:auto;
+    margin-top: 5%;
+    margin-left: 5%;
     flex-wrap: wrap;
 }
 
 .material-placeholder{
     padding:5px;
     margin:5px;
+}
+
+#albumTitle {
+    font-family: Avenir Next;
+    color: #d8842a;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1px;
+}
+
+#username {
+    font-family: Avenir Next;
+    color: #1a2f52;
+    font-size: 15px;
+    line-height: 1.5px;
 }
