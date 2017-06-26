@@ -4,8 +4,9 @@
     height: 450px;
     width: 200px;
     position:relative;
-    top:50px;
-    right:280px;
+    top:120px;
+
+    z-index: 1;
 
 }
 
@@ -33,7 +34,8 @@
     height:750px;
     width:750px;
     position: relative;
-    top: 50px;
+    right:45px;
+    top: 120px;
 
 
 }

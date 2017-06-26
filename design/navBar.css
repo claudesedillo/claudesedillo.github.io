@@ -5,6 +5,7 @@
     width: 100%;
     height: 45px;
     top: 0;   
+    z-index:2;
 }
 
 .navBar a1 {
