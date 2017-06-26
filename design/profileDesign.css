@@ -6,6 +6,7 @@
   position:relative;
   top:120px;  
 }
+
 .user {
     height: 450px;
     width: 200px;
@@ -13,13 +14,13 @@
 }
 
 .user span {
-    font-family: Avenir Next;
+    font-family: Verdana;
     font-size: 15px;
     font-weight: bold;
 }
 
 .user p {
-    font-family: Avenir Next;
+    font-family: Verdana;
     font-size: 10px;
     padding: 5px;
     margin-top: 0;
@@ -41,5 +42,5 @@
 #posts, #albums, #albumsAndPost{
     height: 700px;
     overflow:auto;
-    font-family: Avenir Next;
+    font-family: Verdana;
 }

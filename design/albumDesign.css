@@ -18,7 +18,7 @@ div#mainPanel{
 }
 
 #albumTitle {
-    font-family: Avenir Next;
+    font-family: Verdana;
     color: #d8842a;
     font-weight: bold;
     font-size: 30px;
@@ -26,7 +26,7 @@ div#mainPanel{
 }
 
 #username {
-    font-family: Avenir Next;
+    font-family: Verdana;
     color: #1a2f52;
     font-size: 15px;
     line-height: 1.5px;

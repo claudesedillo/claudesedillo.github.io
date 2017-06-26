@@ -1,7 +1,13 @@
-#postContainer {
-    margin-top: 7%;
+#welcomehead {
+    margin-top: 3%;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+#postContainer {
+    margin-top: 1%;
+   margin-left: 15%;
+   margin-right: 15%; 
 }
     
 a{
@@ -9,15 +15,15 @@ a{
 }
 
 a, p{
-    font-family: Avenir Next;
+    font-family: Verdana;
     font-size: 12pt;
 
 }
 
 #seeMore{
-    font-family: Avenir Next;
+    font-family: Verdana;
     text-align:center;
-
+    box-shadow: 0px 1px 2px black;
     padding: 3px;
     background-color: #009ccb;
     color: #f2f2f2;
@@ -32,7 +38,6 @@ a, p{
     text-align:center;
     background-color:white;
     cursor:not-allowed;
-    
     width: 950px;
     padding: 3px;
     background-color: #009ccb;
@@ -40,10 +45,11 @@ a, p{
 }
 
 #postContainer h1{
-    font-family: Avenir Next;
-    padding: 0px;
-    color:#d8842a;
+    font-family: Verdana;
+    padding: 0.1em 0.1em;
+    color:#009ccb;
+    background-color: #1a2f52;
     font-weight: bold;
-    font-size: 20pt;
-    display: flex;
+    font-size: 18pt;
+    display: inline;
 }
