@@ -18,18 +18,17 @@
 }
 
 img{
-    padding: 5px;
+    padding: 25px;
 }
 
+
 #fixedDiv{
-    height:800px;
+    height:640px;
     width:800px;
     background-color: gray;
     position:fixed;
-/*    right: 100px;*/
 }
 
-#userControl{
-    position:absolute;
-    bottom: 60px;
+div#doScroll{
+    overflow: auto;
 }

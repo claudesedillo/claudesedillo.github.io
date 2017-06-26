@@ -201,9 +201,11 @@ $("document").ready(function() {
             
             $("a#userName").attr("class", "yes");
             $("a#albumName").attr("class", "yes");
-        }
+            $("span#By").html("By: ");
+            $("span#From").html("From album: ");
             
-        
+        }
+
         setUpDisplayPhoto(picID);
         
     });
@@ -211,7 +213,9 @@ $("document").ready(function() {
     
     //On click, just load more photos
     $(document).on("click", "a#showMore", function() {
-       loadPhotos(); 
+       
+        loadPhotos(); 
+        
     });
     
     //On click on user, send in the id.

@@ -1,12 +1,15 @@
 #wrapper {
   display: flex;
+  padding:5px;
+  margin-left: 85px;
+  margin-right: 85px;
+  position:relative;
+  top:120px;  
 }
 .user {
     height: 450px;
     width: 200px;
-    top:120px;
     flex: 1;
-    position: relative;
 }
 
 .user span {
@@ -33,11 +36,6 @@
     height:750px;
     width:750px;
     right:45px;
-    top: 60px;
-    left: 30px;
-    position: relative;
-
-
 }       
 
 #posts, #albums, #albumsAndPost{

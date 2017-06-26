@@ -89,7 +89,7 @@ function setUserTab() {
         
     console.log("UserID: " + temp[1] + " Username: " + theUser.username);
     $("span.userName").html(theUser.username);
-    $("#tabSwipe").tabs({ 'swipeable': true });
+//    $("#tabSwipe").tabs({ 'swipeable': true });
 }
 
 function fillupData() {
