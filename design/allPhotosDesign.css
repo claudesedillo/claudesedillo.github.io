@@ -1,0 +1,35 @@
+.contain{
+    position: relative;
+    top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#discover{
+    text-align: center;
+}
+
+#photoJar{
+    background-color:blue;
+}
+
+#divAction{
+    background-color:red;
+}
+
+img{
+    padding: 5px;
+}
+
+#fixedDiv{
+    height:800px;
+    width:800px;
+    background-color: gray;
+    position:fixed;
+/*    right: 100px;*/
+}
+
+#userControl{
+    position:absolute;
+    bottom: 60px;
+}
