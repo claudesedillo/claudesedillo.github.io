@@ -3,7 +3,13 @@
         <link rel = "stylesheet" type="text/css" href="design/navBar.css">
         <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
         <link rel="stylesheet" type="text/css" href="design/profileDesign.css">
-        
+        <style>
+            #map{
+                width: auto;
+                height: 250px;
+                background-color:cornflowerblue;
+            }
+        </style>
     </head>
     <body>
         <div class = "navBar">
@@ -16,7 +22,7 @@
         
         <div class="row">
             <div class="col s12">
-              <ul class="tabs tabs-fixed-width">
+              <ul id="tabSwipe" class="tabs tabs-fixed-width">
                 <li class="tab col s3"><a href="#albumsAndPost">Feed</a></li>
                 <li class="tab col s3"><a href="#albums">Albums</a></li>
                 <li class="tab col s3"><a href="#posts">Posts</a></li>
@@ -115,6 +121,7 @@
                       Suite: <span id="suite"></span> <br/>
                       City: <span id="city"></span> <br/>
                       Zip Code: <span id="zipcode"></span> <br/>
+                      <div id="map"></div> 
                   </div>
                 </li>
                     
@@ -123,15 +130,24 @@
                   <div class="collapsible-body">
                       Company name: <span id="compName"></span> <br/>
                       Catch-Phrase: <span id="phrase"></span><br/>
-                      Business: <span id="business"></span><br/>
+                      Business: <span id="business"></span><br/>        
                   </div>
                 </li>
               </ul>
-                
             </div>
         </div>
         </div>
-        
+        <script>
+            function myMap(){
+            var mapOptions ={
+            center: new google.maps.LatLng(51.5, -0.12),
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+            }
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-LNlaKJHUAPrJ8OQgmDMq-wKSgHPLAlk&callback=myMap"></script>
         <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/profileJQ.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
