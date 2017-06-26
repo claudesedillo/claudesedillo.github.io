@@ -53,14 +53,21 @@
             </div>
         </div>
         
-        <div class = "userposts">
-         <ul id="headertab" class="tabs">
-            <li class="tab col s3"><a class="active" href="#albumsAndPosts">Feed</a></li>
-            <li class="tab col s3"><a href="#posts">Posts</a></li>
-            <li class="tab col s3"><a href="#albums">Photos</a></li>
-          </ul>
+        
+        <div class="row">
+            <div class="col s12">
+              <ul id="tabSwipe" class="tabs tabs-fixed-width">
+                <li class="tab col s3"><a href="#albumsAndPost">Feed</a></li>
+                <li class="tab col s3"><a href="#albums">Albums</a></li>
+                <li class="tab col s3"><a href="#posts">Posts</a></li>
+                
+              </ul>
+            </div>
             
-          <div id="albumsAndPosts" class="col s12">
+            
+            <div id="albumsAndPost" class="col s12">
+                <h1>Welcome to <span class="userName"></span>'s profile!</h1>
+                
                 <ol><h4>Recent posts:</h4>
                     <li id="recentP1">1</li>
                     <li id="recentP2">1</li>
@@ -72,18 +79,58 @@
                     <li id="recentA2">2</li>
                     <li id="recentA3">2</li>
                 </ol>
-          </div>
+            </div>
             
-          <div id="posts" class="col s12">
+            
+<!--
+            <div id="information" class="col s12">
+                
+                <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header">Personal information</div>
+                  <div class="collapsible-body">
+                      Name: <span id="name"></span> <br/>
+                      Email: <span id="email"></span> <br/>
+                      #Phone: <span id="phone"></span> <br/>
+                      Website: <span id="website"></span> <br/>
+                  </div>
+                </li>
+                    
+                <li>
+                  <div class="collapsible-header">Address</div>
+                  <div class="collapsible-body">
+                      Street: <span id="street"></span> <br/>
+                      Suite: <span id="suite"></span> <br/>
+                      City: <span id="city"></span> <br/>
+                      Zip Code: <span id="zipcode"></span> <br/>
+                  </div>
+                </li>
+                    
+                <li>
+                  <div class="collapsible-header">Company</div> 
+                  <div class="collapsible-body">
+                      Company name: <span id="compName"></span> <br/>
+                      Catch-Phrase: <span id="phrase"></span><br/>
+                      Business: <span id="business"></span><br/>
+                  </div>
+                </li>
+              </ul>
+                
+            </div>
+-->
+            
+            
+            <div id="albums" class="col s12">
                 <h4 id="albumIntro">Album names: </h4>
-              <div class = "collection"></div>
-          </div>
+                <div class = "collection"></div>
+            </div>
             
-          <div id="albums" class="col s12"> 
-              <h4 id="postsIntro"><span class="userName"></span>' posts (Latest to oldest!)</h4>
-            </div> 
-        </div>    
-
+            
+            <div id="posts" class="col s12">
+            <h4 id="postsIntro"><span class="userName"></span>' posts (Latest to oldest!)</h4>
+            </div>
+            
+        </div>
         
         <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/profileJQ.js"></script>

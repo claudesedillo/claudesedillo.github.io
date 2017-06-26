@@ -1,15 +1,18 @@
-
-.userName{
-    text-transform: none;
-}
- 
 .user {
-    position:fixed;
-    margin-top: 0;
-    margin-left: 77%;
+    
+    float:right;
     height: 450px;
-    width: 200px; 
-    overflow: scroll;
+    width: 200px;
+    position:relative;
+    top:50px;
+    right:280px;
+
+}
+
+.user span {
+    font-family: Avenir Next;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .user p {
@@ -20,40 +23,37 @@
     line-height: 14px;
 }
 
-.user span {
-    font-family: Avenir Next;
-    font-size: 15px;
-    font-weight: bold;
-}
 
-#information{
-    font-family: Avenir Next;
-    font-size: 12px;
-    height: 450px;
-    width: 200px;
+.userName{
+    text-transform: none;
 }
+            
+.row{
 
-.collapsible-body span {
-    font-size: 10px;
+    height:750px;
+    width:750px;
+    position: relative;
+    top: 50px;
+
+
 }
-
-.userposts {
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 25%;
+            
+#albumsAndPost{
+    background-color:white;
+}    
+            
+#albums{
+     background-color:yellow;
+}    
+            
+            
+#posts{
+    background-color:gray;
 }
+            
 
-.userposts #headertab {
-    position: inherit;
-    width: inherit;
-    margin-top: 5%;
-    
-}
-
-#albumsAndPosts, #posts, #albums {
-    padding: 0px;
-    position: inherit;
-    width: inherit;
+#posts, #albums, #albumsAndPost{
+    height: 700px;
+    overflow:auto;
     font-family: Avenir Next;
 }
-
