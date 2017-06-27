@@ -12,12 +12,20 @@
         </style>
     </head>
     <body>
-        <div class = "navBar">
-            <a1 href = "homepage.html"><img src = "logo.png" height = "60px"></a1>
+       <div class = "navBar">
+            <img src = "logo.png" height = "60px">
         
             <a href = "homepage.html" data-hover="Home"><img src = "images/home.png"></a>
             <a href="allPhotos.html" data-hover="Photos"><img src = "images/photos.png"></a>
-        </div> 
+            
+            <div class = "searchbox">
+                <img src = "images/search.png">
+            <form id="search" action="">
+                <input id="search" type="text">
+                
+            </form></div>
+        </div>  
+        
         <div id = "wrapper">
         
         <div class="row">
@@ -31,9 +39,7 @@
             </div>
             
             
-            <div id="albumsAndPost" class="col s12">
-                <h1>Welcome to <span class="userName"></span>'s profile!</h1>
-                
+            <div id="albumsAndPost" class="col s12">    
                 <ol><h4>Recent posts:</h4>
                     <li id="recentP1">1</li>
                     <li id="recentP2">1</li>
@@ -87,13 +93,12 @@
             
             
             <div id="albums" class="col s12">
-                <h4 id="albumIntro">Album names: </h4>
+                <h4 id="albumIntro"></h4>
                 <div class = "collection"></div>
             </div>
             
             
             <div id="posts" class="col s12">
-            <h4 id="postsIntro"><span class="userName"></span>' posts (Latest to oldest!)</h4>
             </div>
             
         </div>
