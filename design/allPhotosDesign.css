@@ -10,11 +10,11 @@
 }
 
 #photoJar{
-    background-color:blue;
+    background-color:transparent;
 }
 
 #divAction{
-    background-color:red;
+    background-color:transparent;
 }
 
 div#photoJar img{
@@ -25,7 +25,7 @@ div#photoJar img{
 #fixedDiv{
     height:640px;
     width:800px;
-    background-color: gray;
+    background-color: transparent;
     position:fixed;
 }
 
