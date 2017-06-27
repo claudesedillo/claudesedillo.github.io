@@ -6,10 +6,7 @@
 
 #postContainer {
    margin-top: 1%;
-   margin-left: 17.5%;
-   margin-right: 17.5%; 
-   display: flex;
-   flex-wrap: wrap;
+
 
 }
 
@@ -17,8 +14,10 @@
     background-color: whitesmoke;
     margin: 0 auto;
     margin-top: 5px;
-    width: 433px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 18%;
+    margin-right: 18%;
+    padding: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
     
 }
     
@@ -27,6 +26,8 @@ a{
 }
 
 a, p{
+    margin: 5px 15px;
+    text-align:justify;
     font-family: Verdana;
     font-size: 10pt;
 }
@@ -56,14 +57,15 @@ a, p{
     cursor:not-allowed;
     width: 950px;
     padding: 3px;
-    background-color: #009ccb;
+    background-color: #5192FF;
     color: #f2f2f2;
 }
 
-#postContainer h1{
+#postContainer .post h1{
     font-family: Verdana;
+    margin: 10px 15px;
     text-align: center;
-    color:#009ccb;
+    color:#5192FF;
     font-size: 18pt;
     display: inline;
     text-shadow: 0px 1px 2px #1a2f52;
