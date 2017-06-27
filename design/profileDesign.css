@@ -3,8 +3,11 @@
   padding:5px;
   margin-left: 85px;
   margin-right: 85px;
+  margin-top: 50px;
+/*
   position:relative;
-  top: 10%;
+  top: 120px;
+*/
 }
 
 .user {
