@@ -44,3 +44,9 @@
     overflow:auto;
     font-family: Verdana;
 }
+
+#map{
+                width: auto;
+                height: 250px;
+                background-color:cornflowerblue;
+}
