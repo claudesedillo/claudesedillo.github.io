@@ -107,7 +107,8 @@ function setUpValues() {
     searchUser(theAlbum.userId);
     console.log(theAlbum.title + " " + theUser.username);
     $("h1#albumTitle").html(theAlbum.title);
-    $("span#username").html(theUser.username);
+    $("a#username").html(theUser.username);
+    $("a#username").attr("class", theUser.id);
     
 }
 
@@ -172,6 +173,11 @@ $("document").ready(function() {
         //by default, it only shows a max of 15.
         showPhotos();
  
+    });
+    
+    $(document).on("click", "a#username", function() {
+       console.log($(this).attr("class")); 
+       window.location.href = "profile.html?userID=" +  $(this).attr("class");
     });
     
  
