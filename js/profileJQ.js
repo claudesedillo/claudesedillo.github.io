@@ -243,19 +243,19 @@ function setRecentPosts() {
     
     for(i = 0; i < 3; i++) {
         if(i == 0) {
-            $("li#recentP1").html(ownPosts[index].title);
-            $("li#recentP1").attr("class", ownPosts[index].id);
+            $("span#title1").html(ownPosts[index].title);
+            $("p#content1").html(ownPosts[index].body);
 
         }
         
         else if(i == 1) {
-            $("li#recentP2").html(ownPosts[index].title);
-            $("li#recentP2").attr("class", ownPosts[index].id);
+            $("span#title2").html(ownPosts[index].title);
+            $("p#content2").html(ownPosts[index].body);
         }
         
         else {
-            $("li#recentP3").html(ownPosts[index].title);
-            $("li#recentP3").attr("class", ownPosts[index].id);
+            $("span#title3").html(ownPosts[index].title);
+            $("p#content3").html(ownPosts[index].body);
         }
         
         index--;
