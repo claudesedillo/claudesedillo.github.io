@@ -4,7 +4,7 @@
   margin-left: 85px;
   margin-right: 85px;
   position:relative;
-  top:120px;  
+  top: 10%;
 }
 
 .user {
@@ -46,26 +46,28 @@
 }
 
 #map{
-                width: auto;
-                height: 250px;
-                background-color:cornflowerblue;
+    width: auto;
+    height: 250px;
+    background-color:cornflowerblue;
 }
 
 .tabs .tab a{
-    color:white;
-    background-color: #ffb300;
+    font-family: Verdana;
+    font-weight: 300;
+    color: white;
+    background-color: #5192FF;
 } /*Text color and background color*/
 
 .tabs .tab a:hover {
-    background-color:#f57f17;
+    background-color:#1a2f52;
     color:white;
 } /*Text & background color on hover*/
 
 .tabs .tab a.active {
-    background-color:#f57f17;
+    background-color:#1a2f52;
     color:white;
 } /*Background & text color when a tab is active*/
 
 .tabs .indicator {
-    background-color:#000;
+    background-color:#5192FF;
 } /*This is the little line color dun sa baba ng mga tabs*/
