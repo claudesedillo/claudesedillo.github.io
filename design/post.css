@@ -1,13 +1,28 @@
-#welcomehead {
-    margin-top: 3%;
-    margin-left: 10%;
-    margin-right: 10%;
+#welcomehead img {
+    display: block;
+    margin: auto;
+  
 }
 
 #postContainer {
    margin-top: 1%;
    margin-left: 15%;
    margin-right: 15%; 
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#postContainer .post {
+    margin-top: 1%;
+    margin-left: 15%;
+    margin-right: 15%; 
+    background-color: whitesmoke;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 435px;
+    
+    
 }
     
 a{
@@ -27,6 +42,8 @@ a, p{
     background-color: #009ccb;
     color: #f2f2f2;
     cursor:pointer;
+    width: 875px;
+    
 }
 
 #seeMore:hover{
@@ -45,10 +62,9 @@ a, p{
 
 #postContainer h1{
     font-family: Verdana;
-    padding: 0.1em 0.1em;
+    text-align: center;
     color:#009ccb;
-    background-color: #1a2f52;
-    font-weight: bold;
     font-size: 18pt;
     display: inline;
+    text-shadow: 0px 1px 2px #1a2f52;
 }

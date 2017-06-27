@@ -47,7 +47,7 @@
 .searchbox {
     float: right;
     margin-right: 3%;
-    margin-top: 1%;
+    margin-top: 10px;
 }
 
 .searchbox #search {
