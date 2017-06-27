@@ -5,6 +5,8 @@ var theUser;
 var ownAlbum = [0], ownPosts = [0], ownPhotos = [0]; //specifically for that certain user.
 var albumIndex = 0, ownPostsIndex = 0, ownPhotosIndex = 0;
 var temp = (window.location.href).split("=");
+var lat, lng;
+var doMap;
 
 //This variable is a count to determine the posts to be loaded
 //Starting for the recent post (index 9);
@@ -49,6 +51,21 @@ function getIt(type) {
                                 });
 }
 
+ function myMap(){
+            return function(Willdo) {
+                console.log(Willdo);
+                console.log("myMap lat: " + lat);
+                console.log("myMap lng: " + lng);
+                var mapOptions ={
+                    center: new google.maps.LatLng(lat, lng),
+                    zoom: 10,
+                    mapTypeId: google.maps.MapTypeId.HYBRID
+                }
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                return "DONE!";
+            };
+}
+
 //Promises to get the data.
 getUsers = new Promise(function(resolve, reject) {
                                 resolve(getIt("users"));    
@@ -61,6 +78,10 @@ getPhotos = new Promise(function(resolve, reject) {
 });
 getPosts = new Promise(function(resolve, reject) {
                                 resolve(getIt("posts"));
+});
+
+doMap = new Promise(function(resolve, reject) {
+                             resolve(myMap()); 
 });
 
 //This function returns the name of the user, given the ID.
@@ -269,6 +290,8 @@ function createAlbums(){
     }
 }
 
+
+
 $("document").ready(function() {
     
     //Get objects, and perform necessary tasks needed.
@@ -293,7 +316,11 @@ $("document").ready(function() {
         setRecentPosts();
         createAlbums();
         document.title = theUser.username;
-       
+        lat = theUser.address.geo.lat
+        lng = theUser.address.geo.lng
+        return doMap;
+    }).then(function(result) {
+        result("Going to do it!");
     });
     
     $(document).on("click", "div.collection a", function() {
