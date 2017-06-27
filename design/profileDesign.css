@@ -50,3 +50,22 @@
                 height: 250px;
                 background-color:cornflowerblue;
 }
+
+.tabs .tab a{
+    color:white;
+    background-color: #ffb300;
+} /*Text color and background color*/
+
+.tabs .tab a:hover {
+    background-color:#f57f17;
+    color:white;
+} /*Text & background color on hover*/
+
+.tabs .tab a.active {
+    background-color:#f57f17;
+    color:white;
+} /*Background & text color when a tab is active*/
+
+.tabs .indicator {
+    background-color:#000;
+} /*This is the little line color dun sa baba ng mga tabs*/
