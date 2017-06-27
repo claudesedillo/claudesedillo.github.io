@@ -25,7 +25,7 @@ a{
     cursor:pointer;
 }
 
-a, p{
+p a, p{
     margin: 5px 15px;
     text-align:justify;
     font-family: Verdana;
@@ -37,7 +37,7 @@ a, p{
     text-align:center;
     box-shadow: 0px 1px 2px black;
     padding: 3px;
-    background-color: #5192FF;
+    background-color: #1a2f52;
     color: #f2f2f2;
     cursor:pointer;
     width: 875px;
@@ -47,7 +47,7 @@ a, p{
 }
 
 #seeMore:hover{
-    background-color: #1a2f52;
+    background-color: #5192FF;
 }
     
 #noMore{
@@ -65,6 +65,7 @@ a, p{
     font-family: Verdana;
     margin: 10px 15px;
     text-align: center;
+    font-weight: 400;
     color:#5192FF;
     font-size: 18pt;
     display: inline;
